@@ -8,25 +8,24 @@
   <name>java-project</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-    <plugins>
-      <plugin>
-        <groupId>external.atlassian.jgitflow</groupId>
-        <artifactId>jgitflow-maven-plugin</artifactId>
-        <version>1.0-m5.1</version>
-        <configuration>
-            <flowInitContext>      
-          </flowInitContext>
-            <noDeploy>true</noDeploy>
-            <squash>true</squash>
-            <scmCommentPrefix>[RELEASE] </scmCommentPrefix>
-        </configuration>
-    </plugin>
-  </plugins>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-  </dependencies>
+    </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>external.atlassian.jgitflow</groupId>
+        <artifactId>jgitflow-maven-plugin</artifactId>
+        <version>1.0-m5.1</version>
+        <configuration>
+            <noDeploy>true</noDeploy>
+            <squash>true</squash>
+        </configuration>
+    </plugin>
+  </plugins>
+    </build>
 </project>
